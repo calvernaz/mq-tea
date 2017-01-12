@@ -4,7 +4,7 @@
   "description": "MQTT Broker",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "standard && make test"
   },
   "repository": {
     "type": "git",
@@ -24,5 +24,14 @@
     "jsdoc": "3.4.3",
     "mocha": "3.2.0",
     "should": "11.1.2"
+  },
+  "devDependencies": {
+    "standard": "8.6.0"
+  },
+  "standard": {
+      "ignore": [
+          "**/documentation/",
+          "**/node_modules"
+      ]
   }
 }
