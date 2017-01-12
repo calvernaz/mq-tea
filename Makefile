@@ -1,5 +1,10 @@
 TESTS = test/*test*.js
+DOCS = documentation
+
 REPORTER = spec
+
+docs:
+	@./node_modules/.bin/jsdoc -r *.js -d $(DOCS)
 
 test:
 	@./node_modules/.bin/mocha \
