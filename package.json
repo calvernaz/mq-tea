@@ -1,0 +1,23 @@
+{
+  "name": "mq-tea",
+  "version": "1.0.0",
+  "description": "MQTT Broker",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calvernaz/mq-tea.git"
+  },
+  "keywords": [
+    "mqtt",
+    "iot"
+  ],
+  "author": "calvernaz <cesar.alvernaz@gmail.com> (https://weirdloop.org)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/calvernaz/mq-tea/issues"
+  },
+  "homepage": "https://github.com/calvernaz/mq-tea#readme"
+}
