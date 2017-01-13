@@ -21,17 +21,20 @@
   },
   "homepage": "https://github.com/calvernaz/mq-tea#readme",
   "dependencies": {
+    "assert": "1.4.1",
+    "chai": "3.5.0",
     "jsdoc": "3.4.3",
     "mocha": "3.2.0",
-    "should": "11.1.2"
+    "should": "11.1.2",
+    "sinon": "1.17.7"
   },
   "devDependencies": {
     "standard": "8.6.0"
   },
   "standard": {
-      "ignore": [
-          "**/documentation/",
-          "**/node_modules"
-      ]
+    "ignore": [
+      "**/documentation/",
+      "**/node_modules"
+    ]
   }
 }
