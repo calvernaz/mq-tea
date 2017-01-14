@@ -1,27 +1,31 @@
+PATH	:= node_modules/.bin:$(PATH)
+
 TESTS = test/*test*.js
 DOCS = documentation
-
 REPORTER = spec
 
 docs:
-	@./node_modules/.bin/jsdoc -r *.js -d $(DOCS)
+	@jsdoc -r *.js -d $(DOCS)
 
 debug:
-	DEBUG=mq-tea ./bin/start
+	@export NODE_ENV=development; DEBUG=mq-tea ./bin/start
 
 test:
-	@./node_modules/.bin/mocha \
+	@mocha \
 	--require should \
 	--reporter $(REPORTER) \
 	--growl \
 	$(TESTS)
 
 test-ci:
-	@./node_modules/.bin/mocha \
+	@mocha \
 	--require should \
 	--reporter $(REPORTER) \
 	--growl \
 	--watch
 	$(TESTS)
+
+prod:
+	@NODE_ENV=production ./bin/start
 
 .PHONY: test test-ci
