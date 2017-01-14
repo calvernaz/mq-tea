@@ -6,6 +6,9 @@ REPORTER = spec
 docs:
 	@./node_modules/.bin/jsdoc -r *.js -d $(DOCS)
 
+debug:
+	DEBUG=mq-tea ./bin/start
+
 test:
 	@./node_modules/.bin/mocha \
 	--require should \

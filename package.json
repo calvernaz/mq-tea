@@ -4,10 +4,11 @@
   "description": "MQTT Broker",
   "main": "index.js",
   "scripts": {
+    "start": "./bin/start",
     "test": "standard && make test"
   },
   "repository": {
-    "type": "git",
+    "type": "./bin/start",
     "url": "git+https://github.com/calvernaz/mq-tea.git"
   },
   "keywords": [
@@ -23,10 +24,11 @@
   "dependencies": {
     "assert": "1.4.1",
     "chai": "3.5.0",
+    "debug": "2.6.0",
     "jsdoc": "3.4.3",
     "mocha": "3.2.0",
-    "should": "11.1.2",
-    "sinon": "1.17.7"
+    "mqtt-packet": "5.2.1",
+    "should": "11.1.2"
   },
   "devDependencies": {
     "standard": "8.6.0"

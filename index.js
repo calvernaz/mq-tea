@@ -5,5 +5,5 @@ const Server = require('./lib/server')
  * @param {object} config - The server configuration
  */
 exports.startServer = function (config) {
-    return new Server(config)
+  return new Server(config)
 }

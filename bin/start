@@ -1,0 +1,8 @@
+#!/usr/bin/env node
+
+
+require('../index')
+    .startServer({ port: 1883 })
+    .listen(() => {
+        console.log("Server is up and running")
+    })
