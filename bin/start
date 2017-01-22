@@ -1,9 +1,10 @@
 #!/usr/bin/env node
 
 const debug = require('debug')('mq-tea')
+const util = require('util')
 
 require('../index')
   .startServer({ port: 1883 })
   .listen(() => {
-    debug('[%s] Server is up and running', process.env.NODE_ENV)
+    debug(`[${process.env.NODE_ENV}] Server is up and running on port ${1883}`)
   })
