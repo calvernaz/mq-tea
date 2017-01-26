@@ -23,6 +23,7 @@
   "homepage": "https://github.com/calvernaz/mq-tea#readme",
   "dependencies": {
     "assert": "1.4.1",
+    "async": "2.1.4",
     "chai": "3.5.0",
     "debug": "2.6.0",
     "jsdoc": "3.4.3",
