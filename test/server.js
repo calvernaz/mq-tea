@@ -26,5 +26,6 @@ describe('Server', function () {
       server = new Server({ port: 5005 })
       expect(server.config()).to.deep.equal({ port: 5005 })
     })
+
   })
 })

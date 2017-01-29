@@ -1,8 +1,6 @@
 'use strict'
 
-const should = require('chai').should
 const expect = require('chai').expect
-const assert = require('chai').assert
 const sinon = require('sinon')
 const net = require('net')
 
@@ -30,6 +28,22 @@ describe('Broker', function () {
 
     it('should_not_match_when_wildcard_topic_doesnt_affect_subs', function () {
       expect(broker.topic_matches_sub('/foo/+/bar', 'foo/bar')).to.equal(false)
+    })
+
+    it('#_is_valid_wildcard_receive_all_messages', function () {
+      expect(broker.topic_matches_sub('#', '/foobar/bar')).to.equal(true)
+    })
+
+    it('#_not_valid_terminator_character_for_a_topic', function() {
+      expect(broker.topic_matches_sub('sport/tennis#', '/sport/tennis/')).to.equal(false)
+    })
+
+    it('#_not_valid_as_subtopic_character', function () {
+      expect(broker.topic_matches_sub('sport/tennis/#/ranking', 'sport/tennis/bar')).to.equal(false)
+    })
+
+    it('slashed_topic_are_different_from_non_slashed_ones', function () {
+      expect(broker.topic_matches_sub('/finance', 'finance')).to.equal(false)
     })
   })
 })
