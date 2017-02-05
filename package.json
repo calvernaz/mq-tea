@@ -32,7 +32,8 @@
     "mqtt-connection": "3.0.0",
     "require-all": "2.1.0",
     "should": "11.1.2",
-    "sinon": "1.17.7"
+    "sinon": "1.17.7",
+    "uuid": "3.0.1"
   },
   "devDependencies": {
     "standard": "8.6.0"
